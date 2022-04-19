@@ -1,0 +1,199 @@
+blpram.pds
+
+PALASM4  PARSER   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+
+                    ***********************************
+                    *     PALASM PARSER LISTING       *
+                    ***********************************
+
+LINE #   |----+----1----+----2----+----3----+----4----+----5----+----6----+
+   1     |TITLE    BLPRAM GAL
+   2     |PATTERN  blpram
+   3     |REVISION 1.00
+   4     |AUTHOR   Sven Schnelle
+   5     |COMPANY  none
+   6     |DATE     04/06/22
+   7     |CHIP  blpram  PAL16V8
+   8     |PIN 1 A21
+   9     |PIN 2 A22
+  10     |PIN 3 A23
+  11     |PIN 4 WE
+  12     |PIN 5 OE
+  13     |PIN 14 ACTL
+  14     |PIN 15 ACTH
+  15     |PIN 16 OEL
+  16     |PIN 17 OEH
+  17     |PIN 18 WEL
+  18     |PIN 19 WEH
+  19     |EQUATIONS
+  20     |ACTH = A21 * A22 * A23
+  21     |ACTL = /A21 * A22 * A23
+  22     |/OEH = ACTH * OE
+  23     |/OEL = ACTL * OE
+  24     |/WEH = ACTH * WE
+  24     |/WEL = ACTL * WE
+
+ %% PARSE %%    No errors.  No warnings.
+
+ %% PARSE %%    File processed successfully.    File:  blpram.pds
+PALASM4  BPP   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+EQUATIONS SEGMENT
+Processing equation for ====>ACTH
+Processing equation for ====>ACTL
+Processing equation for ====>/OEH
+Processing equation for ====>/OEL
+Processing equation for ====>/WEH
+Processing equation for ====>/WEL
+
+ %%  BPP  %% Maximum memory allocated was: 13602 bytes.
+
+ %%  BPP  %% File Processed Successfully.  File: blpram.pds.
+ %%  BPP  %% ERROR count: 0  WARNING count: 0
+PALASM4  EXPAND   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+......
+
+ %%  EXPAND  %% Maximum memory allocated was: 2598 bytes.
+
+ %%  EXPAND  %% File Processed Successfully.  File: blpram.pds.
+ %%  EXPAND  %% ERROR count: 0  WARNING count: 0
+PALASM4  BPP   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+EQUATIONS SEGMENT
+Processing equation for ====>ACTH
+Processing equation for ====>ACTL
+Processing equation for ====>/OEH
+Processing equation for ====>/OEL
+Processing equation for ====>/WEH
+Processing equation for ====>/WEL
+
+ %%  BPP  %% Maximum memory allocated was: 13602 bytes.
+
+ %%  BPP  %% File Processed Successfully.  File: blpram.pds.
+ %%  BPP  %% ERROR count: 0  WARNING count: 0
+PALASM4  MINIMIZE   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+......
+
+
+Processing equation ====> /WEH                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /WEL                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /OEH                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /OEL                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> ACTH                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> ACTL                MINIMIZE_ON  (1 pt ---> 1 pt)
+
+ %%  MINIMIZE  %% Maximum memory allocated was: 4304 bytes.
+
+ %%  MINIMIZE  %% File Processed Successfully.  File: blpram.pds.
+ %%  MINIMIZE  %% ERROR count: 0  WARNING count: 0
+
+PALASM4  PAL ASSEMBLER   - MARKET RELEASE 1.5a (8-20-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+FILE  blpram.pds
+TITLE  BLPRAM GAL
+Equation being processed for output ==>>  ACTL
+Equation being processed for output ==>>  ACTH
+Equation being processed for output ==>> /OEL
+Equation being processed for output ==>> /OEH
+Equation being processed for output ==>> /WEL
+Equation being processed for output ==>> /WEH
+The fuse plot is stored in ===>blpram.XPT
+The JEDEC is stored in ===>blpram.JED
+
+ %%  PAL ASSEMBLER  %% Maximum memory allocated was: 12032 bytes.
+
+ %%  PAL ASSEMBLER  %% File Processed Successfully.  File: blpram.pds.
+ %%  PAL ASSEMBLER  %% ERROR count: 0  WARNING count: 0
+blpram.tmp
+
+PALASM4  PARSER   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+
+                    ***********************************
+                    *     PALASM PARSER LISTING       *
+                    ***********************************
+
+LINE #   |----+----1----+----2----+----3----+----4----+----5----+----6----+
+   1     |TITLE    BLPRAM GAL
+   2     |PATTERN  blpram
+   3     |REVISION 1.00
+   4     |AUTHOR   Sven Schnelle
+   5     |COMPANY  none
+   6     |DATE     04/06/22
+   7     |CHIP  blpram  PAL16V8
+   8     |PIN 1 A21
+   9     |PIN 2 A22
+  10     |PIN 3 A23
+  11     |PIN 4 WE
+  12     |PIN 5 OE
+  13     |PIN 14 ACTL
+  14     |PIN 15 ACTH
+  15     |PIN 16 OEL
+  16     |PIN 17 OEH
+  17     |PIN 18 WEL
+  18     |PIN 19 WEH
+  19     |SIMULATION
+  20     |TRACE_ON A23 A22 A21 ACTH WE OE WEH WEL OEH OEL
+  21     |SETF A23 A22 A21 /WE /OE
+  22     |CHECK WEL WEH OEH OEL ACTH
+  23     |SETF WE
+  24     |CHECK /WEH
+  25     |SETF /WE
+  26     |SETF OE
+  27     |CHECK /OEH
+  28     |SETF /OE
+  29     |SETF /A21
+  30     |SETF WE
+  31     |CHECK /WEL
+  32     |SETF /WE
+  33     |SETF OE
+  34     |CHECK /OEL
+  35     |SETF /OE
+  35     |TRACE_OFF
+
+ %% PARSE %%    No errors.  No warnings.
+
+ %% PARSE %%    File processed successfully.    File:  blpram.tmp
+PALASM4  PLDSIM   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+File  blpram.pds
+Title  BLPRAM GAL
+
+   1 - TRACE_ON
+   1 - SETF
+   2 - CHECK
+   2 - SETF
+   3 - CHECK
+   3 - SETF
+   4 - SETF
+   5 - CHECK
+   5 - SETF
+   6 - SETF
+   7 - SETF
+   8 - CHECK
+   8 - SETF
+   9 - SETF
+  10 - CHECK
+  10 - SETF
+  11 - TRACE_OFF
+
+   END OF SIMULATION
+Simulation results (history) are in ===> blpram.HST
+Simulation results (trace) are in   ===> blpram.TRF
+Merged results (JEDEC) are in       ===> blpram.JDC
+
+ %%  PLDSIM  %% Maximum memory allocated was: 15754 bytes.
+
+ %%  PLDSIM  %% File Processed Successfully.  File: blpram.pds.
+ %%  PLDSIM  %% ERROR count: 0  WARNING count: 0
