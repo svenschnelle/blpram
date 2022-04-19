@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "ram")(type "KiCad")(uri "${KIPRJMOD}/ram.kicad_sym")(options "")(descr ""))
+  (lib (name "DRAM")(type "KiCad")(uri "${KIPRJMOD}/DRAM.kicad_sym")(options "")(descr ""))
+)
